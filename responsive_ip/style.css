@@ -1,0 +1,90 @@
+
+:root {
+    --main-color: #1257cf;
+    --text-color: #0a1869;
+    --card-bg: #8a9eab;
+    --hero-bg: #99b6d9;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+}
+header {
+    background: var(--main-color);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+nav a {
+    color: rgb(26, 28, 31);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--hero-bg);
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    background: var(--main-color);
+    color: rgb(155, 200, 212);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.4s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #8883ac;
+    transform: scale(1.05);
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
